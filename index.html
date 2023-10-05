@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="icon" href="https://ld-wt73.template-help.com/wt_prod-19659/images/favicon.ico" type="image/x-icon">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>R&CO-建築和施工網站模板</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    #sec-1,
+    #sec-2>div>div,
+    #sec-3 .container,
+    #sec-4 .container {
+      transition: 0.5s;
+    }
+
+    #top {
+      height: 56px;
+      background: #fff;
+      padding: 8px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+    }
+
+    #menu {
+      width: 60%;
+      margin-right: 32px;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 500;
+    }
+
+    #menu span:hover {
+      cursor: pointer;
+      color: rgb(175, 136, 85);
+    }
+
+    #menu-btn {
+      width: 40px;
+      height: 40px;
+      padding: 1px 6px;
+    }
+
+    #menu-btn::before,
+    #menu-btn::after {
+      content: "";
+    }
+
+    #menu-btn>span,
+    #menu-btn::before,
+    #menu-btn::after {
+      width: 24px;
+      height: 2px;
+      background: #29293a;
+      display: block;
+      margin: 2px 0;
+    }
+
+    #search-btn {
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+    }
+
+    #sec-1 {
+      height: 336px;
+      background: linear-gradient(rgba(41, 41, 58, 0.5), rgba(41, 41, 58, 0.5)), url("https://ld-wt73.template-help.com/wt_prod-19659/images/slider-architecture-slide-1-1920x800.jpg") no-repeat 60% 50%/cover;
+      margin-top: 56px;
+      padding: 50px 0 0 0;
+    }
+
+    #text-title {
+      width: 100%;
+      height: 186px;
+      padding: 0px 15px;
+    }
+
+    #text-title>div:first-child {
+      width: 78px;
+      height: 24px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 14px;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 24px;
+    }
+
+    #text-title>div:nth-child(2) {
+      color: #fff;
+      font-size: 30px;
+      width: 197px;
+      height: 69px;
+      font-family: 'Roboto Condensed', sans-serif;
+      line-height: 34.5px;
+    }
+
+    #text-title>div:last-child {
+      width: 222px;
+      height: 52.5px;
+      border-radius: 0.5rem;
+      border: 1px solid #eee;
+      padding: 14px 35px;
+      letter-spacing: 2px;
+      color: #fff;
+      font-family: 'Work Sans', sans-serif;
+      margin-top: 40px;
+      font-weight: 700;
+    }
+
+    #text-title>div:last-child:hover,
+    #sec-3-btn:hover {
+      cursor: pointer;
+      background: rgb(182, 147, 101);
+      border: 1px solid rgb(182, 147, 101);
+      color: #fff;
+    }
+
+    #arrow {
+      width: 100%;
+      height: 35px;
+      padding: 0 15px;
+    }
+
+    #arrow>div {
+      width: 33px;
+      height: 35px;
+      font-size: 32px;
+      line-height: 35px;
+      color: #fff;
+    }
+
+    #arrow>div:hover {
+      cursor: pointer;
+      color: rgb(182, 147, 101)
+    }
+
+    #sec-2,
+    #sec-4 {
+      padding: 50px 0;
+    }
+
+    #sec-2>div {
+      padding: 0 15px;
+      margin: 0;
+    }
+
+    #sec-2 h3 {
+      font-size: 24px;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    #sec-2 h3+p {
+      font-size: 24px;
+      font-family: 'Roboto Condensed', sans-serif;
+      line-height: 32px;
+    }
+
+    #sec-2-btn {
+      width: 195px;
+      height: 52.5px;
+      border-radius: 0.5rem;
+      border: 1px solid #000;
+      padding: 14px 35px;
+      letter-spacing: 3px;
+      color: #000;
+      font-family: 'Work Sans', sans-serif;
+      margin-top: 40px;
+      font-weight: 700;
+    }
+
+    #num-pic {
+      width: 100%;
+      height: 404px;
+      background: url("https://ld-wt73.template-help.com/wt_prod-19659/images/box-expiriens.png") no-repeat 64% 58%/cover;
+    }
+
+    #num-pic>div {
+      width: 94%;
+      height: 94%;
+      background: #fff;
+      mix-blend-mode: screen;
+      font-size: 90px;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    #num-pic span {
+      font-size: 18px;
+      color: #000;
+    }
+
+    #sec-3 {
+      padding: 50px 0;
+      background: #f2f4f9;
+    }
+
+    /*  */
+    #sec-3 img {
+      width: 320px;
+      height: 250px;
+      margin-bottom: 16px;
+    }
+
+    /*  */
+
+    #sec-3 h3,
+    #sec-4 h3,
+    #sec-5 h3 {
+      font-size: 24px;
+      font-family: "Roboto Condensed", sans-serif;
+      line-height: 1.3;
+    }
+
+    #sec-3 .row,
+    #sec-4 .row {
+      margin-top: 60px;
+    }
+
+    #sec-3 .row>div {
+      height: 250px;
+      text-align: center;
+      margin-bottom: 30px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #sec-3-btn {
+      width: 280px;
+      height: 52.5px;
+      border-radius: 0.5rem;
+      border: 1px solid rgb(182, 147, 101);
+      padding: 14px 35px;
+      letter-spacing: 2px;
+      color: #000;
+      font-family: 'Work Sans', sans-serif;
+      margin-top: 25px;
+      font-weight: 700;
+    }
+
+    #sec-4 {
+      text-align: center;
+    }
+
+    #sec-4 .row>div {
+      margin-bottom: 50px;
+    }
+
+    #sec-4 .row>div h4 {
+      margin-top: 15px;
+    }
+
+    #sec-4 .row>div p {
+      margin-top: 10px;
+    }
+
+    #sec-4 .circle {
+      margin: auto;
+      width: 84px;
+      height: 84px;
+      border: 2px solid #e8e9ee;
+      border-radius: 50%;
+      line-height: 84px;
+      font-size: 32px;
+      color: #af8855;
+      transition: 0.2s;
+    }
+
+    #sec-4 .circle:hover {
+      color: #fff;
+      background: #af8855;
+      border: 2px solid #af8855;
+      box-shadow: 0 0 5px #333;
+      transform: scale(0.95);
+    }
+
+    #sec-5 {
+      padding: 50px 0;
+      background: url("https://ld-wt73.template-help.com/wt_prod-19659/images/bg-testimonials-1920x679.jpg") no-repeat 30% 100%/cover;
+      height: 428px;
+      color: #fff;
+    }
+
+    #sec-5 .intro {
+      transition: 1s;
+    }
+
+    #sec-5 h4 {
+      font-size: 20px;
+      height: 27.5px;
+    }
+
+    #sec-5 p {
+      line-height: 24px;
+      letter-spacing: 0.42px;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 300;
+    }
+
+    #sec-5 img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    #sec-5 .photo-btn,
+    #sec-6 .photo-btn2 {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: none;
+      border: none;
+      transition: 0.2s;
+    }
+
+    #sec-6 {
+      height: 208px;
+      padding: 35px 0;
+    }
+
+    #sec-6 .container>div>div:nth-child(3),
+    #sec-6 .container>div>div:nth-child(4),
+    #sec-6 .container>div>div:nth-child(5) {
+      display: none;
+    }
+
+    #sec-6 .photo-btn2 {
+      background: gray;
+    }
+
+    #sec-5 .photo-btn:hover,
+    #sec-6 .photo-btn2:hover {
+      background: #af8855;
+      transform: scale(1.4);
+      cursor: pointer;
+    }
+
+    #footer {
+      background: #000;
+      color: #fff;
+    }
+
+    #sec-6 .d-flex>div {
+      width: 124px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #footer .col-12 {
+      margin-bottom: 50px;
+    }
+
+    #footer h5 {
+      font-family: "Roboto Condensed", sans-serif;
+      line-height: 1.5;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    #footer p,
+    #footer span {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #footer li {
+      width: 280px;
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    #footer i {
+      margin-right: 1rem;
+    }
+
+    #footer input {
+      width: 100%;
+      height: 48px;
+      text-indent: 1rem;
+      border-radius: 6px;
+      box-shadow: none;
+      border-style: none;
+    }
+
+    #footer button {
+      position: absolute;
+      right: 0;
+      width: 80px;
+      height: 48px;
+      padding: 11px 28px;
+      font-size: 24px;
+      text-align: center;
+      background: rgb(175, 136, 85);
+      color: #fff;
+      border-radius: 6px;
+      box-shadow: none;
+      border: none;
+    }
+
+    #footer-info {
+      padding: 30px 15px;
+    }
+
+    @media(min-width:576px) {
+
+      #text-title,
+      #arrow {
+        width: 540px;
+      }
+
+      #text-title>div:nth-child(2) {
+        width: 210px;
+        height: 73px;
+        font-size: 32px;
+      }
+
+      #num-pic {
+        width: 500px;
+        height: 404px;
+      }
+
+      #sec-2-text {
+        width: 510px;
+      }
+
+      #sec-3 img {
+        width: 240px;
+        height: 250px;
+        margin-bottom: 16px;
+      }
+
+      #sec-5 .container {
+        width: 510px;
+      }
+
+      #sec-6 .container>div>div:nth-child(3) {
+        display: block;
+      }
+
+      #footer-info {
+        height: 145px;
+      }
+
+      #footer button {
+        position: static;
+        width: 100%;
+      }
+    }
+
+    @media(min-width:768px) {
+      #sec-1 {
+        height: 546px;
+        padding-top: 130px;
+      }
+
+      #sec-3 img {
+        width: 330px;
+        height: 228px;
+        margin-bottom: 16px;
+      }
+
+      #text-title,
+      #arrow {
+        width: 720px;
+      }
+
+      #text-title {
+        height: 236px;
+      }
+
+      #text-title>div:first-child {
+        width: 111px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      #text-title>div:nth-child(2) {
+        width: 320px;
+        height: 115px;
+        font-size: 46px;
+        line-height: 57.5px;
+      }
+
+      /* #sec-6 .container {
+        width: 1056px;
+        overflow: hidden;
+      }
+
+      #sec-6 .d-flex {
+        width: 1320px;
+      } */
+
+      #sec-6 .container>div>div:nth-child(4) {
+        display: block;
+      }
+
+      #footer-info {
+        height: 105px;
+      }
+
+      #footer button {
+        position: absolute;
+        width: 80px;
+      }
+    }
+
+    @media(min-width:992px) {
+      #top {
+        height: 72px;
+      }
+
+      #sec-1 {
+        height: 586px;
+      }
+
+      #sec-3 h3+div {
+        height: 620px;
+      }
+
+      #sec-3 img:nth-child(odd) {
+        width: 290px;
+        height: 237px;
+      }
+
+      #sec-3 img:nth-child(even) {
+        width: 290px;
+        height: 363px;
+      }
+
+      #text-title,
+      #arrow {
+        width: 960px;
+      }
+
+      #arrow {
+        margin-bottom: 6rem !important;
+      }
+
+      #text-title>div:nth-child(2) {
+        width: 353px;
+        height: 135px;
+        font-size: 54px;
+        line-height: 67.5px;
+      }
+
+      #text-title>div:last-child {
+        margin-top: 60px;
+      }
+
+      #num-pic {
+        width: 422px;
+      }
+
+      #num-pic>div {
+        width: 395px;
+      }
+
+      #sec-2-text {
+        width: 480px;
+      }
+
+      #sec-6 .container>div>div:nth-child(5) {
+        display: block;
+      }
+
+      #sec-6 .container>div {
+        height: 138px;
+      }
+
+      #footer h5 {
+        font-size: 18px;
+      }
+
+      #footer p,
+      #footer span {
+        font-size: 16px;
+      }
+
+      #footer-info {
+        padding: 0;
+        height: 75px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media (min-width:1200px) {
+      #num-pic {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      #num-pic>div {
+        width: 95%;
+      }
+
+      #sec-2 h3 {
+        font-size: 40px;
+      }
+
+      #sec-3 img:nth-child(odd) {
+        width: 370px;
+        height: 255px;
+      }
+
+      #sec-3 img:nth-child(even) {
+        width: 370px;
+        height: 463px;
+      }
+
+      #sec-3 img {
+        margin: 0 10px;
+      }
+
+      #sec-3 h3+div {
+        width: 1200px;
+        height: 738px;
+      }
+
+      #sec-4 .row p {
+        width: 330px;
+        margin: auto;
+      }
+
+      #footer .row>div:first-child>div,
+      #footer .row>div:last-child>div {
+        width: 370px;
+      }
+
+      #footer .row>div:nth-child(2)>div {
+        width: 280px;
+      }
+
+      #top>div,
+      #text-title,
+      #sec-2,
+      #footer-info {
+        max-width: 1200px;
+      }
+
+      #text-title,
+      #arrow {
+        width: 1200px;
+      }
+
+      #sec-1 {
+        height: 695px;
+      }
+
+      #sec-3 h3,
+      #sec-4 h3,
+      #sec-5 h3 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="top" class="container-fluid d-flex justify-content-center align-items-lg-center">
+    <div class="container-xl d-flex">
+      <div id="menu-btn" class="d-flex d-lg-none justify-content-center align-items-center flex-column">
+        <span></span>
+      </div>
+      <a href="./index.html" class="d-flex align-items-center ms-2 me-auto"><img
+          src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-default-109x27.png" alt="" width="87"
+          height="22"></a>
+      <div id="menu" class="d-none d-lg-flex justify-content-between align-items-center">
+        <span style="color: rgb(175, 136, 85);">HOME</span>
+        <span>ABOUT US</span>
+        <span>PROJECTS</span>
+        <span>SERVICES</span>
+        <span>BLOG</span>
+        <span>PAGES</span>
+        <span>CONTACTS</span>
+      </div>
+      <div id="search-btn" class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="sec-1" class="container-fluid d-flex flex-column">
+    <div id="text-title" class="mx-sm-auto mb-auto">
+      <div>APRIL 2022</div>
+      <div>Hearst Business<br>Center</div>
+      <div class="d-flex align-items-center justify-content-center"><span>VIEW PROJECT</span></div>
+    </div>
+    <div id="arrow" class="d-flex align-items-center mx-sm-auto mb-4">
+      <div style="margin-right: 28px;" id="left">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-arrow-right" id="right"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="sec-2" class="container-fluid">
+    <div class="row justify-content-md-start flex-lg-row-reverse justify-content-xl-around">
+      <div class="col-lg-6 col-xl-5" style="margin-bottom: 50px;">
+        <div id="sec-2-text" class="mx-auto">
+          <h3>A Few Words About Us</h3>
+          <p style="margin: 35px 0;">R&CO is a team of highly talented, experienced, and award-winning architects and
+            designers.
+          </p>
+          <p style="font-size: 14px;">Our company has been the leading provider of architecture services to clients
+            throughout the USA since
+            1999. We pay attention to every demand of our customers.
+          </p>
+          <div id="sec-2-btn" class="d-flex align-items-center"><span>READ MORE</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div id="num-pic" class="d-flex justify-content-center align-items-center mx-auto">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <h1>19</h1>
+            <span>YEARS OF EXPRIENCE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="sec-3">
+    <div class="container">
+      <h3 style="text-align: center;">Our Projects</h3>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-1-370x256.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-2-370x464.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-3-370x256.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-4-370x464.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-5-370x256.jpg" alt="">
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-6-370x464.jpg" alt="">
+        </div>
+      </div>
+      <div id="sec-3-btn" class="d-flex align-items-center justify-content-center mx-auto"><span>VIEW ALL
+          PROJECT</span></div>
+    </div>
+  </div> -->
+  <div id="sec-3">
+    <div class="container d-xl-flex flex-xl-column align-items-xl-center">
+      <h3 style="text-align: center;">Our Projects</h3>
+      <div
+        class="d-flex justify-content-center flex-sm-row flex-wrap justify-content-sm-between flex-lg-column align-content-xl-center"
+        style="margin-top: 25px;">
+        <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-1-370x256.jpg" alt=""
+          class="order-lg-0">
+
+        <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-2-370x464.jpg" alt=""
+          class="order-lg-2">
+
+        <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-3-370x256.jpg" alt=""
+          class="order-lg-4">
+
+        <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-4-370x464.jpg" alt=""
+          class="order-lg-1">
+
+        <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-5-370x256.jpg" alt=""
+          class="order-lg-3">
+
+        <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/gallery-masonry-6-370x464.jpg" alt=""
+          class="order-lg-5">
+      </div>
+    </div>
+    <div id="sec-3-btn" class="d-flex align-items-center justify-content-center mx-auto"><span>VIEW ALL
+        PROJECT</span></div>
+  </div>
+
+  <div id="sec-4">
+    <div class="container">
+      <h3 style="text-align: center;">Services</h3>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="circle"><i class="fa-regular fa-lightbulb"></i></div>
+          <h4>Interior/Exterior Design</h4>
+          <p>
+            We combine Interior and Exterior Design services and often provide them as a single solution. It helps us
+            strengthen the creation of truly unique spaces.
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="circle"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h4>Pre-Design</h4>
+          <p>
+            Our pre-design solutions include analysis and planning services that help both the client and architects to
+            work out the forthcoming project.
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="circle"><i class="fa-solid fa-cube"></i></div>
+          <h4>3D Modeling</h4>
+          <p>
+            We offer comprehensive Architectural Engineering Services including Interior design, Master planning, 3D
+            modeling, working drawings, and documentation.
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="circle"><i class="fa-solid fa-pencil"></i></div>
+          <h4>Architecture Engineering</h4>
+          <p>
+            We provide a range of architectural 3D modeling services to our customers to aid the design, planning and
+            visualization phase of construction projects
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="circle"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h4>Project Management</h4>
+          <p>
+            Project management is the process by which our team plans and executes your project. We will develop it
+            using the best possible approach.
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="circle"><i class="fa-sharp fa-regular fa-comment"></i></div>
+          <h4>Consultations</h4>
+          <p>
+            Our team also provides consultations on all architectural issues, even if you need specific info about
+            working on interior renovation or exterior design tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sec-5">
+    <div class="container">
+      <h3 style="text-align: center;">Testimonials</h3>
+      <div class="intro" style="height: 296px;">
+        <svg style="fill: #eee;" class="quote-modern-mark" x="0px" y="0px" width="35px" height="35px"
+          viewBox="0 0 35 25">
+          <path
+            d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z">
+          </path>
+        </svg>
+        <p class="mb-4">
+          We selected R&CO because of their architects’ rigorous design background and education. They exceeded our
+          expectations and emerged as leaders of our project.
+        </p>
+        <div class="d-flex flex-column flex-wrap align-content-start" style="height: 50px;">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/testimonials-person-3-96x96.jpg">
+          <h4 class="">Albert Webb</h4>
+          <span>Regular Client</span>
+        </div>
+      </div>
+      <div class="intro" style="height: 296px;">
+        <svg style="fill: #eee;" class="quote-modern-mark" x="0px" y="0px" width="35px" height="35px"
+          viewBox="0 0 35 25">
+          <path
+            d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z">
+          </path>
+        </svg>
+        <p class="mb-4">
+          When we needed design and architecture specialists, your team was there for us. You took all our ideas and
+          demands into consideration and made a great projec
+        </p>
+        <div class="d-flex flex-column flex-wrap align-content-start " style="height: 50px;">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/testimonials-person-1-96x96.jpg">
+          <h4 class="m-auto">Kelly McMillan</h4>
+          <span>Regular Client</span>
+        </div>
+      </div>
+      <div class="intro" style="height: 296px;">
+        <svg style="fill: #eee;" class="quote-modern-mark" x="0px" y="0px" width="35px" height="35px"
+          viewBox="0 0 35 25">
+          <path
+            d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z">
+          </path>
+        </svg>
+        <p class="mb-4">
+          I have worked with many architecture companies offering design & construction services, and out of all you
+          were one who really stood out from the rest.
+        </p>
+        <div class="d-flex flex-column flex-wrap align-content-start " style="height: 50px;">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/testimonials-person-2-96x96.jpg">
+          <h4 class="m-auto">Sam Wilson</h4>
+          <span>Regular Client</span>
+        </div>
+      </div>
+      <div class="intro" style="height: 296px;">
+        <svg style="fill: #eee;" class="quote-modern-mark" x="0px" y="0px" width="35px" height="35px"
+          viewBox="0 0 35 25">
+          <path
+            d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z">
+          </path>
+        </svg>
+        <p class="mb-4">
+          Working with your team was a pleasure. You balanced the architectural vision and the project realities
+          beautifully and had a deep understanding of our priorities.
+        </p>
+        <div class="d-flex flex-column flex-wrap align-content-start " style="height: 50px;">
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/testimonials-person-5-96x96.jpg">
+          <h4 class="m-auto">Harold Barnett</h4>
+          <span>Regular Client</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around mx-auto" style="width: 168px;">
+        <button class="photo-btn"></button>
+        <button class="photo-btn"></button>
+        <button class="photo-btn"></button>
+        <button class="photo-btn"></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="sec-6">
+    <div class="container">
+      <div class="d-flex justify-content-around align-items-center">
+        <div>
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-john-brad-135x87.png">
+        </div>
+        <div>
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-the-oldbrand-134x104.png">
+        </div>
+        <div>
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-havana-cabana-132x87.png">
+        </div>
+        <div>
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-brownie-143x85.png">
+        </div>
+        <div>
+          <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-hillplan-111x85.png">
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-around mx-auto d-lg-none"
+        style="width: 126px; height: 24px; margin-top: 10px;">
+        <button class="photo-btn2"></button>
+        <button class="photo-btn2"></button>
+        <button class="photo-btn2"></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container" style="padding: 35px 15px 15px 15px;">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="ms-xl-auto">
+            <h5>ABOUT US</h5>
+            <p>R&CO company is a diversified global architecture company that brings the best designers and architects
+              together. We have been offering great design solutions to individual and corporate customers worldwide
+              since
+              the late 1990s.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="mx-xl-auto">
+            <h5>CONTACT INFORMATION</h5>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i><span>2130 Fulton Street<br>San Diego, CA 94117-1080
+                  USA</span></li>
+              <li><i class="fa-solid fa-phone"></i><span>1-800-1234-567</span></li>
+              <li><i class="fa-solid fa-envelope"></i><span>info@demolink.org</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" style="margin-bottom: 0;">
+          <div>
+            <h5>NEWSLETTER</h5>
+            <p>Sign up to our newsletter and be the first to know about the latest news, special offers, events, and
+              discounts.</p>
+            <div id="form" class="d-flex flex-sm-column" style="position: relative;margin-top: 15px;">
+              <input class="mb-sm-2" type="text" placeholder="E-mail">
+              <button><i class="fa-solid fa-envelope"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container d-flex flex-column align-items-center justify-content-around flex-md-row justify-content-md-between"
+      id="footer-info">
+      <img src="https://ld-wt73.template-help.com/wt_prod-19659/images/logo-inverse-109x27.png" width="109px"
+        height="27px">
+      <div class="d-flex flex-column align-items-center flex-sm-row">
+        <span>© 2023 All Rights Reserved.</span>
+        <span>Privacy Policy</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script>
+    const left = document.getElementById('left')
+    const right = document.getElementById('right')
+    const sec1 = document.getElementById('sec-1')
+
+    const intros = document.querySelectorAll('.intro')
+    const photoBtns = document.querySelectorAll('.photo-btn')
+
+    let num = 1
+
+    left.addEventListener('click', () => {
+      num--
+      if (num <= 0) {
+        num += 4
+        num %= 5
+        sec1.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://ld-wt73.template-help.com/wt_prod-19659/images/slider-architecture-slide-${num}-1920x800.jpg") no-repeat center/cover`
+      } else {
+        sec1.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://ld-wt73.template-help.com/wt_prod-19659/images/slider-architecture-slide-${num}-1920x800.jpg") no-repeat center/cover`
+      }
+    })
+
+    right.addEventListener('click', () => {
+      num++
+      num = Math.abs(num)
+      num %= 5
+      if (num === 0) {
+        sec1.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://ld-wt73.template-help.com/wt_prod-19659/images/slider-architecture-slide-${num + 1}-1920x800.jpg") no-repeat center/cover`
+      } else {
+        sec1.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://ld-wt73.template-help.com/wt_prod-19659/images/slider-architecture-slide-${num}-1920x800.jpg") no-repeat center/cover`
+      }
+    })
+
+    photoBtns.forEach((photoBtn, index) => {
+      photoBtn.addEventListener('click', () => {
+        for (const intro of intros) {
+          intro.style.display = 'none'
+        }
+        intros[index].style.display = 'block'
+
+        for (let i = 0; i < 4; i++) {
+          photoBtns[i].style.transform = 'scale(1)'
+          photoBtns[i].style.background = '#fff'
+        }
+
+        photoBtn.style.transform = 'scale(1.4)'
+        photoBtn.style.background = '#af8855'
+      })
+    })
+
+    photoBtns[0].click()
+  </script>
+</body>
+
+</html>
